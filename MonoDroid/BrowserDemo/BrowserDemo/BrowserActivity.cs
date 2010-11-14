@@ -20,8 +20,7 @@ namespace BrowserDemo
         private EditText _urlText;
         private HistoryDataHelper _historyDataHelper;
         
-        public BrowserActivity(IntPtr handle)
-            : base(handle)
+        public BrowserActivity() : base()
         {
         }
 

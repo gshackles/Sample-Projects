@@ -8,8 +8,7 @@ namespace BrowserDemo
     [Activity(Label = "@string/settings_activity_label")]
     public class SettingsActivity : PreferenceActivity
     {
-        public SettingsActivity(IntPtr handle)
-            : base(handle)
+        public SettingsActivity() : base()
         {
         }
 

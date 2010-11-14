@@ -13,8 +13,7 @@ namespace BrowserDemo
     {
         private HistoryDataHelper _historyDataHelper;
 
-        public HistoryActivity(IntPtr handle)
-            : base(handle)
+        public HistoryActivity() : base()
         {
         }
 
