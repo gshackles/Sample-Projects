@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -20,23 +21,19 @@ namespace BrowserDemo
         private EditText _urlText;
         private HistoryDataHelper _historyDataHelper;
         
-        public BrowserActivity() : base()
-        {
-        }
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             RequestWindowFeature(WindowFeatures.Progress);
 
-            SetContentView(Resource.layout.main);
+            SetContentView(Resource.Layout.main);
 
             _historyDataHelper = new HistoryDataHelper(this);
 
-            _browser = FindViewById<WebView>(Resource.id.browser);
-            _urlText = FindViewById<EditText>(Resource.id.url);
-            Button goButton = FindViewById<Button>(Resource.id.go_button);
+            _browser = FindViewById<WebView>(Resource.Id.browser);
+            _urlText = FindViewById<EditText>(Resource.Id.url);
+            Button goButton = FindViewById<Button>(Resource.Id.go_button);
 
             _browser.Settings.JavaScriptEnabled = true;
             _browser.SetWebViewClient(new CustomWebViewClient(_urlText));
@@ -62,14 +59,14 @@ namespace BrowserDemo
 
         private void updateBrowser()
         {
-            string url = _urlText.Text.ToString();
+            string url = getText(_urlText);
 
             if (url.Length == 0)
             {
                 new AlertDialog.Builder(this)
-                    .SetTitle(Resources.GetString(Resource.@string.invalid_url_alert_title))
-                    .SetMessage(Resources.GetString(Resource.@string.invalid_url_alert_message))
-                    .SetPositiveButton(Resources.GetString(Resource.@string.ok_button), null)
+                    .SetTitle(Resources.GetString(Resource.String.invalid_url_alert_title))
+                    .SetMessage(Resources.GetString(Resource.String.invalid_url_alert_message))
+                    .SetPositiveButton(Resources.GetString(Resource.String.ok_button), null)
                     .Show();
             }
             else
@@ -103,7 +100,7 @@ namespace BrowserDemo
         {
             base.OnCreateOptionsMenu(menu);
 
-            new MenuInflater(this).Inflate(Resource.menu.options_menu, menu);
+            new MenuInflater(this).Inflate(Resource.Menu.options_menu, menu);
 
             return true;
         }
@@ -112,9 +109,9 @@ namespace BrowserDemo
         {
             base.OnPrepareOptionsMenu(menu);
 
-            menu.FindItem(Resource.id.refresh).SetVisible(_browser.Progress == 100 && !string.IsNullOrEmpty(_urlText.Text.ToString()));
-            menu.FindItem(Resource.id.stop).SetVisible(_browser.Progress != 100);
-            menu.FindItem(Resource.id.home).SetVisible(!string.IsNullOrEmpty(getHomePageUrl()));
+            menu.FindItem(Resource.Id.refresh).SetVisible(_browser.Progress == 100 && !string.IsNullOrEmpty(getText(_urlText)));
+            menu.FindItem(Resource.Id.stop).SetVisible(_browser.Progress != 100);
+            menu.FindItem(Resource.Id.home).SetVisible(!string.IsNullOrEmpty(getHomePageUrl()));
 
             return true;
         }
@@ -123,19 +120,19 @@ namespace BrowserDemo
         {
             switch (item.ItemId)
             {
-                case Resource.id.refresh:
+                case Resource.Id.refresh:
                     _browser.Reload();
                     break;
-                case Resource.id.stop:
+                case Resource.Id.stop:
                     _browser.StopLoading();
                     break;
-                case Resource.id.settings:
+                case Resource.Id.settings:
                     StartActivity(typeof(SettingsActivity));
                     break;
-                case Resource.id.home:
+                case Resource.Id.home:
                     goToHomePageIfSet();
                     break;
-                case Resource.id.history:
+                case Resource.Id.history:
                     var intent = new Intent(this, typeof(HistoryActivity));
                     StartActivityForResult(intent, HISTORY_REQUEST_CODE);
                     break;
@@ -170,6 +167,11 @@ namespace BrowserDemo
                 _urlText.Text = data.GetStringExtra("url");
                 updateBrowser();
             }
+        }
+
+        private string getText(EditText view)
+        {
+            return new string(view.Text.ToArray());
         }
     }
 }

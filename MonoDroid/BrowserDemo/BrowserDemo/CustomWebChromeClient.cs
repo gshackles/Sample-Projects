@@ -34,7 +34,7 @@ namespace BrowserDemo
 
                 if (soundEnabled)
                 {
-                    _mediaPlayer = MediaPlayer.Create(_context.ApplicationContext, Resource.raw.inception_horn);
+                    _mediaPlayer = MediaPlayer.Create(_context.ApplicationContext, Resource.Raw.inception_horn);
                     _mediaPlayer.Completion += delegate { _mediaPlayer.Release(); };
                     _mediaPlayer.Start();
                 }
@@ -52,7 +52,7 @@ namespace BrowserDemo
             }
             else
             {
-                _context.Title = _context.ApplicationContext.Resources.GetString(Resource.@string.title_loading);
+                _context.Title = _context.ApplicationContext.Resources.GetString(Resource.String.title_loading);
             }
         }
     }

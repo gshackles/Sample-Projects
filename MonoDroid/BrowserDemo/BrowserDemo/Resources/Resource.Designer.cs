@@ -15,26 +15,61 @@ namespace BrowserDemo
 	public partial class Resource
 	{
 		
-		public class attr
+		public partial class Attribute
 		{
 			
-			private attr()
+			private Attribute()
 			{
 			}
 		}
 		
-		public class drawable
+		public partial class Drawable
 		{
 			
 			// aapt resource value: 0x7f020000
 			public const int icon = 2130837504;
 			
-			private drawable()
+			private Drawable()
 			{
 			}
 		}
 		
-		public class layout
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f080003
+			public const int browser = 2131230723;
+			
+			// aapt resource value: 0x7f080002
+			public const int go_button = 2131230722;
+			
+			// aapt resource value: 0x7f080007
+			public const int history = 2131230727;
+			
+			// aapt resource value: 0x7f080006
+			public const int home = 2131230726;
+			
+			// aapt resource value: 0x7f080000
+			public const int page_title = 2131230720;
+			
+			// aapt resource value: 0x7f080004
+			public const int refresh = 2131230724;
+			
+			// aapt resource value: 0x7f080008
+			public const int settings = 2131230728;
+			
+			// aapt resource value: 0x7f080005
+			public const int stop = 2131230725;
+			
+			// aapt resource value: 0x7f080001
+			public const int url = 2131230721;
+			
+			private Id()
+			{
+			}
+		}
+		
+		public partial class Layout
 		{
 			
 			// aapt resource value: 0x7f030000
@@ -46,137 +81,102 @@ namespace BrowserDemo
 			// aapt resource value: 0x7f030002
 			public const int main = 2130903042;
 			
-			private layout()
+			private Layout()
 			{
 			}
 		}
 		
-		public class xml
-		{
-			
-			// aapt resource value: 0x7f040000
-			public const int settings = 2130968576;
-			
-			private xml()
-			{
-			}
-		}
-		
-		public class raw
-		{
-			
-			// aapt resource value: 0x7f050000
-			public const int inception_horn = 2131034112;
-			
-			private raw()
-			{
-			}
-		}
-		
-		public class @string
-		{
-			
-			// aapt resource value: 0x7f060000
-			public const int app_name = 2131099648;
-			
-			// aapt resource value: 0x7f060001
-			public const int settings_activity_label = 2131099649;
-			
-			// aapt resource value: 0x7f060002
-			public const int history_activity_label = 2131099650;
-			
-			// aapt resource value: 0x7f060003
-			public const int ok_button = 2131099651;
-			
-			// aapt resource value: 0x7f060004
-			public const int go_button = 2131099652;
-			
-			// aapt resource value: 0x7f060005
-			public const int invalid_url_alert_title = 2131099653;
-			
-			// aapt resource value: 0x7f060006
-			public const int invalid_url_alert_message = 2131099654;
-			
-			// aapt resource value: 0x7f060007
-			public const int title_loading = 2131099655;
-			
-			// aapt resource value: 0x7f060008
-			public const int no_history = 2131099656;
-			
-			// aapt resource value: 0x7f060009
-			public const int menu_refresh = 2131099657;
-			
-			// aapt resource value: 0x7f06000a
-			public const int menu_stop = 2131099658;
-			
-			// aapt resource value: 0x7f06000b
-			public const int menu_settings = 2131099659;
-			
-			// aapt resource value: 0x7f06000c
-			public const int menu_home = 2131099660;
-			
-			// aapt resource value: 0x7f06000d
-			public const int menu_history = 2131099661;
-			
-			// aapt resource value: 0x7f06000e
-			public const int pref_sounds_title = 2131099662;
-			
-			// aapt resource value: 0x7f06000f
-			public const int pref_sounds_summary = 2131099663;
-			
-			// aapt resource value: 0x7f060010
-			public const int pref_home_url_title = 2131099664;
-			
-			// aapt resource value: 0x7f060011
-			public const int pref_home_url_summary = 2131099665;
-			
-			private @string()
-			{
-			}
-		}
-		
-		public class menu
+		public partial class Menu
 		{
 			
 			// aapt resource value: 0x7f070000
 			public const int options_menu = 2131165184;
 			
-			private menu()
+			private Menu()
 			{
 			}
 		}
 		
-		public class id
+		public partial class Raw
 		{
 			
-			// aapt resource value: 0x7f080000
-			public const int page_title = 2131230720;
+			// aapt resource value: 0x7f050000
+			public const int inception_horn = 2131034112;
 			
-			// aapt resource value: 0x7f080001
-			public const int url = 2131230721;
+			private Raw()
+			{
+			}
+		}
+		
+		public partial class String
+		{
 			
-			// aapt resource value: 0x7f080002
-			public const int go_button = 2131230722;
+			// aapt resource value: 0x7f060000
+			public const int app_name = 2131099648;
 			
-			// aapt resource value: 0x7f080003
-			public const int browser = 2131230723;
+			// aapt resource value: 0x7f060004
+			public const int go_button = 2131099652;
 			
-			// aapt resource value: 0x7f080004
-			public const int refresh = 2131230724;
+			// aapt resource value: 0x7f060002
+			public const int history_activity_label = 2131099650;
 			
-			// aapt resource value: 0x7f080005
-			public const int stop = 2131230725;
+			// aapt resource value: 0x7f060006
+			public const int invalid_url_alert_message = 2131099654;
 			
-			// aapt resource value: 0x7f080006
-			public const int home = 2131230726;
+			// aapt resource value: 0x7f060005
+			public const int invalid_url_alert_title = 2131099653;
 			
-			// aapt resource value: 0x7f080007
-			public const int history = 2131230727;
+			// aapt resource value: 0x7f06000d
+			public const int menu_history = 2131099661;
 			
-			// aapt resource value: 0x7f080008
-			public const int settings = 2131230728;
+			// aapt resource value: 0x7f06000c
+			public const int menu_home = 2131099660;
 			
-			private id()
+			// aapt resource value: 0x7f060009
+			public const int menu_refresh = 2131099657;
+			
+			// aapt resource value: 0x7f06000b
+			public const int menu_settings = 2131099659;
+			
+			// aapt resource value: 0x7f06000a
+			public const int menu_stop = 2131099658;
+			
+			// aapt resource value: 0x7f060008
+			public const int no_history = 2131099656;
+			
+			// aapt resource value: 0x7f060003
+			public const int ok_button = 2131099651;
+			
+			// aapt resource value: 0x7f060011
+			public const int pref_home_url_summary = 2131099665;
+			
+			// aapt resource value: 0x7f060010
+			public const int pref_home_url_title = 2131099664;
+			
+			// aapt resource value: 0x7f06000f
+			public const int pref_sounds_summary = 2131099663;
+			
+			// aapt resource value: 0x7f06000e
+			public const int pref_sounds_title = 2131099662;
+			
+			// aapt resource value: 0x7f060001
+			public const int settings_activity_label = 2131099649;
+			
+			// aapt resource value: 0x7f060007
+			public const int title_loading = 2131099655;
+			
+			private String()
+			{
+			}
+		}
+		
+		public partial class Xml
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int settings = 2130968576;
+			
+			private Xml()
 			{
 			}
 		}

@@ -13,21 +13,17 @@ namespace BrowserDemo
     {
         private HistoryDataHelper _historyDataHelper;
 
-        public HistoryActivity() : base()
-        {
-        }
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            SetContentView(Resource.layout.history);
+            SetContentView(Resource.Layout.history);
 
             _historyDataHelper = new HistoryDataHelper(this);
 
-            ListAdapter = new SimpleCursorAdapter(this, Resource.layout.history_item, getHistory(),
+            ListAdapter = new SimpleCursorAdapter(this, Resource.Layout.history_item, getHistory(),
                                                   new string[] { "Title" },
-                                                  new int[] { Resource.id.page_title });
+                                                  new int[] { Resource.Id.page_title });
         }
 
         protected override void OnListItemClick(ListView l, Android.Views.View v, int position, long id)
