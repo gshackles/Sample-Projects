@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/shake_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Shake" />
+    <Button
+        android:id="@+id/fadeout_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Fade Out" />
+    <Button
+        android:id="@+id/fadein_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Fade In" />
+    <Button
+        android:id="@+id/scale_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Scale" />
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="This is some sample text"
+        android:textSize="20dp" />
+</LinearLayout>

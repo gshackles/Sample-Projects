@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item android:id="@+id/chrome"
+              android:title="Chrome" />
+        <item android:id="@+id/firefox"
+              android:title="Firefox" />
+        <item android:id="@+id/opera"
+              android:title="Opera" />
+        <item android:id="@+id/safari"
+              android:title="Safari" />
+        <item android:id="@+id/ie"
+              android:title="Internet Explorer" />
+    </group>
+</menu>

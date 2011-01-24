@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87E7222E-4B05-4DF0-BF0C-763D9F7B5ABB}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonoDroidSamples</RootNamespace>
+    <AssemblyName>MonoDroidSamples</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenTK" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DemoActivities\Animations\AnimationActivity.cs" />
+    <Compile Include="DemoActivities\Assets\AssetActivity.cs" />
+    <Compile Include="DemoActivities\BroadcastReceivers\BatteryReceiver.cs" />
+    <Compile Include="DemoActivities\BroadcastReceivers\ReceiverActivity.cs" />
+    <Compile Include="DemoActivities\ButtonClick\ButtonClickActivity.cs" />
+    <Compile Include="DemoActivities\Contacts\ContactsActivity.cs" />
+    <Compile Include="DemoActivities\Contacts\PickContactActivity.cs" />
+    <Compile Include="DemoActivities\Database\AddNoteActivity.cs" />
+    <Compile Include="DemoActivities\Database\NoteCursorAdapter.cs" />
+    <Compile Include="DemoActivities\Database\NoteDatabaseAdapter.cs" />
+    <Compile Include="DemoActivities\Database\NoteDatabaseConstants.cs" />
+    <Compile Include="DemoActivities\Database\NoteDatabaseHelper.cs" />
+    <Compile Include="DemoActivities\Database\NoteListActivity.cs" />
+    <Compile Include="DemoActivities\Database\ViewNoteActivity.cs" />
+    <Compile Include="DemoActivities\Localization\LocalizationActivity.cs" />
+    <Compile Include="DemoActivities\LocationDemo\LocationActivity.cs" />
+    <Compile Include="DemoActivities\Menu\MenuDemoActivity.cs" />
+    <Compile Include="DemoActivities\OpenGL\CubeView.cs" />
+    <Compile Include="DemoActivities\OpenGL\OpenGLActivity.cs" />
+    <Compile Include="DemoActivities\Preferences\PreferencesActivity.cs" />
+    <Compile Include="DemoActivities\Preferences\UpdatePreferencesActivity.cs" />
+    <Compile Include="DemoActivities\Services\MusicService.cs" />
+    <Compile Include="DemoActivities\Services\ServiceActivity.cs" />
+    <Compile Include="DemoActivities\TextNotify\TextNotifyActivity.cs" />
+    <Compile Include="MenuActivity.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="MenuItemAdapter.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleApplication.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\digital-7.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\main.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\button_click.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\text_notify.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\contacts_list.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\contacts_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\loremipsum.txt" />
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\layout\pick_contact.xml" />
+    <AndroidResource Include="Resources\layout\preferences.xml" />
+    <AndroidResource Include="Resources\xml\settings.xml" />
+    <AndroidResource Include="Resources\menu\options_menu.xml" />
+    <AndroidResource Include="Resources\layout\menu_demo.xml" />
+    <AndroidResource Include="Resources\menu\context_menu.xml" />
+    <AndroidResource Include="Resources\layout\assets_demo.xml" />
+    <AndroidResource Include="Resources\layout\add_note.xml" />
+    <AndroidResource Include="Resources\layout\note_list.xml" />
+    <AndroidResource Include="Resources\layout\note_list_item.xml" />
+    <AndroidResource Include="Resources\layout\view_note.xml" />
+    <AndroidResource Include="Resources\anim\shake.xml" />
+    <AndroidResource Include="Resources\layout\animation_demo.xml" />
+    <AndroidResource Include="Resources\anim\fade_out.xml" />
+    <AndroidResource Include="Resources\anim\fade_in.xml" />
+    <AndroidResource Include="Resources\anim\scale.xml" />
+    <AndroidResource Include="Resources\layout\service_demo.xml" />
+    <AndroidResource Include="Resources\raw\volbeat.mp3" />
+    <AndroidResource Include="Resources\values-es\strings.xml" />
+    <AndroidResource Include="Resources\layout\localization_demo.xml" />
+    <AndroidResource Include="Resources\drawable-es-nodpi\flag.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\flag.png" />
+    <AndroidResource Include="Resources\layout\opengl.xml" />
+    <AndroidResource Include="Resources\layout\receiver_demo.xml" />
+    <AndroidResource Include="Resources\layout\location_demo.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

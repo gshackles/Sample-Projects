@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:id="@+id/font_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="This text has a custom font"
+        android:textSize="25dp"
+        android:paddingBottom="10dp" />
+    <TextView
+        android:id="@+id/lorem"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

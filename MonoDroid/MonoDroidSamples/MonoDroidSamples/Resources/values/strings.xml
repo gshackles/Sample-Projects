@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="localization_text">This is in English</string>
+    <string name="localization_label">Localization Demo</string>
+</resources>

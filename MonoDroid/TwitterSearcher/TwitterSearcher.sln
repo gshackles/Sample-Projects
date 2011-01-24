@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterSearcher", "TwitterSearcher\TwitterSearcher.csproj", "{60947A8D-2A01-4F68-B18F-51BB6FCC80D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterSearcher.MonoDroid", "TwitterSearcher.MonoDroid\TwitterSearcher.MonoDroid.csproj", "{555517EC-314F-45A0-BF01-DA8C2C6AD7A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterSearcher.WP7", "TwitterSearcher.WP7\TwitterSearcher.WP7.csproj", "{984B5094-B2BE-4369-A904-19C6BBA89368}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.MonoDroid", "App.MonoDroid\App.MonoDroid.csproj", "{7DC261CC-1A3F-4225-A92E-7ED5A8ED4D4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.WP7", "App.WP7\App.WP7.csproj", "{4D81F7D2-03A2-4D58-9D60-1F62974478EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60947A8D-2A01-4F68-B18F-51BB6FCC80D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60947A8D-2A01-4F68-B18F-51BB6FCC80D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60947A8D-2A01-4F68-B18F-51BB6FCC80D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60947A8D-2A01-4F68-B18F-51BB6FCC80D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{555517EC-314F-45A0-BF01-DA8C2C6AD7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{555517EC-314F-45A0-BF01-DA8C2C6AD7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{555517EC-314F-45A0-BF01-DA8C2C6AD7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{555517EC-314F-45A0-BF01-DA8C2C6AD7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984B5094-B2BE-4369-A904-19C6BBA89368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984B5094-B2BE-4369-A904-19C6BBA89368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984B5094-B2BE-4369-A904-19C6BBA89368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984B5094-B2BE-4369-A904-19C6BBA89368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC261CC-1A3F-4225-A92E-7ED5A8ED4D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC261CC-1A3F-4225-A92E-7ED5A8ED4D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC261CC-1A3F-4225-A92E-7ED5A8ED4D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC261CC-1A3F-4225-A92E-7ED5A8ED4D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D81F7D2-03A2-4D58-9D60-1F62974478EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D81F7D2-03A2-4D58-9D60-1F62974478EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D81F7D2-03A2-4D58-9D60-1F62974478EA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4D81F7D2-03A2-4D58-9D60-1F62974478EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D81F7D2-03A2-4D58-9D60-1F62974478EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D81F7D2-03A2-4D58-9D60-1F62974478EA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

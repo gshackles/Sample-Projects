@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="home_url"
+        android:title="Home Page"
+        android:summary="Default page for the browser"
+        android:defaultValue="http://10.0.2.2"
+        android:inputType="textUri"/>
+
+    <CheckBoxPreference
+        android:key="sounds"
+        android:title="Sounds"
+        android:summary="Play notification sounds"
+        android:defaultValue="false" />
+</PreferenceScreen>
