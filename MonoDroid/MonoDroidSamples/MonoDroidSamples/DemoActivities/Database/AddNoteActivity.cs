@@ -25,15 +25,9 @@ namespace MonoDroidSamples.DemoActivities.Database
 
         void AddNoteActivity_Click(object sender, EventArgs e)
         {
-            ((SampleApplication)Application).NoteDatabaseAdapter.AddNote(getText(_title), getText(_content));
+            ((SampleApplication)Application).NoteDatabaseAdapter.AddNote(_title.Text.ToString(), _content.Text.ToString());
 
             Finish();
-        }
-
-        // workaround for https://bugzilla.novell.com/show_bug.cgi?id=648893
-        private string getText(EditText view)
-        {
-            return new string(view.Text.ToArray());
         }
     }
 }

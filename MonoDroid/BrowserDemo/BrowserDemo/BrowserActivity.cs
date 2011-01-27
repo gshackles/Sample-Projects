@@ -59,7 +59,7 @@ namespace BrowserDemo
 
         private void updateBrowser()
         {
-            string url = getText(_urlText);
+            string url = _urlText.Text.ToString();
 
             if (url.Length == 0)
             {
@@ -109,7 +109,7 @@ namespace BrowserDemo
         {
             base.OnPrepareOptionsMenu(menu);
 
-            menu.FindItem(Resource.Id.refresh).SetVisible(_browser.Progress == 100 && !string.IsNullOrEmpty(getText(_urlText)));
+            menu.FindItem(Resource.Id.refresh).SetVisible(_browser.Progress == 100 && !string.IsNullOrEmpty(_urlText.Text.ToString()));
             menu.FindItem(Resource.Id.stop).SetVisible(_browser.Progress != 100);
             menu.FindItem(Resource.Id.home).SetVisible(!string.IsNullOrEmpty(getHomePageUrl()));
 
@@ -167,11 +167,6 @@ namespace BrowserDemo
                 _urlText.Text = data.GetStringExtra("url");
                 updateBrowser();
             }
-        }
-
-        private string getText(EditText view)
-        {
-            return new string(view.Text.ToArray());
         }
     }
 }
