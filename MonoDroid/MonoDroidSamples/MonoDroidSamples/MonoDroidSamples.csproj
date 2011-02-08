@@ -114,7 +114,9 @@
     <AndroidResource Include="Resources\layout\menu_demo.xml" />
     <AndroidResource Include="Resources\menu\context_menu.xml" />
     <AndroidResource Include="Resources\layout\assets_demo.xml" />
-    <AndroidResource Include="Resources\layout\add_note.xml" />
+    <AndroidResource Include="Resources\layout\add_note.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\note_list.xml" />
     <AndroidResource Include="Resources\layout\note_list_item.xml" />
     <AndroidResource Include="Resources\layout\view_note.xml" />
