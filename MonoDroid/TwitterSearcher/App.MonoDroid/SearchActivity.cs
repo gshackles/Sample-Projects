@@ -20,8 +20,8 @@ namespace App.MonoDroid
 
             SetContentView(Resource.Layout.main);
 
-            //_searcher = new Searcher("http://search.twitter.com/search.atom?q=");
-            _searcher = new Searcher("http://10.0.2.2/search.xml?q=");
+            _searcher = new Searcher("http://search.twitter.com/search.atom?q=");
+            //_searcher = new Searcher("http://10.0.2.2/search.xml?q=");
             
             _resultsList = FindViewById<ListView>(Resource.Id.results);
             _queryText = FindViewById<TextView>(Resource.Id.query);

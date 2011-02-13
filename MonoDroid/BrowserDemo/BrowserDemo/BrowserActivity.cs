@@ -31,30 +31,35 @@ namespace BrowserDemo
 
             _historyDataHelper = new HistoryDataHelper(this);
 
-            _browser = FindViewById<WebView>(Resource.Id.browser);
             _urlText = FindViewById<EditText>(Resource.Id.url);
-            Button goButton = FindViewById<Button>(Resource.Id.go_button);
+            _urlText.KeyPress = _urlText_KeyPress;
 
+            FindViewById<Button>(Resource.Id.go_button).Click += delegate { updateBrowser(); };
+
+            _browser = FindViewById<WebView>(Resource.Id.browser);
             _browser.Settings.JavaScriptEnabled = true;
             _browser.SetWebViewClient(new CustomWebViewClient(_urlText));
             _browser.SetWebChromeClient(new CustomWebChromeClient(this, _historyDataHelper));
-            _browser.Touch += delegate { _browser.RequestFocus(); };
+            _browser.Touch = delegate 
+            { 
+                _browser.RequestFocus(FocusSearchDirection.Down); 
 
-            goButton.Click += delegate { updateBrowser(); };
-
-            _urlText.KeyPress += new EventHandler<View.KeyEventArgs>(_urlText_KeyPress);
+                return false; 
+            };
 
             goToHomePageIfSet();
         }
 
-        private void _urlText_KeyPress(object sender, View.KeyEventArgs e)
+        private bool _urlText_KeyPress(View v, int keyCode, KeyEvent e)
         {
             if (e.KeyCode == Keycode.Enter)
             {
                 updateBrowser();
 
-                e.ReturnValue = true;
+                return true;
             }
+
+            return false;
         }
 
         private void updateBrowser()
@@ -66,7 +71,7 @@ namespace BrowserDemo
                 new AlertDialog.Builder(this)
                     .SetTitle(Resources.GetString(Resource.String.invalid_url_alert_title))
                     .SetMessage(Resources.GetString(Resource.String.invalid_url_alert_message))
-                    .SetPositiveButton(Resources.GetString(Resource.String.ok_button), null)
+                    .SetPositiveButton(Resources.GetString(Resource.String.ok_button), null as IDialogInterfaceOnClickListener)
                     .Show();
             }
             else
