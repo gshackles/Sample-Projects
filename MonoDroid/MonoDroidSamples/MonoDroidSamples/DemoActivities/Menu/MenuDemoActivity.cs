@@ -60,7 +60,7 @@ namespace MonoDroidSamples.DemoActivities.Menu
             if (v == _text)
             {
                 MenuInflater.Inflate(Resource.Menu.context_menu, menu);
-                menu.SetHeaderTitle("Favorite browser?");
+                menu.SetHeaderTitle(new Java.Lang.String("Favorite browser?"));
             }
         }
 
@@ -73,7 +73,7 @@ namespace MonoDroidSamples.DemoActivities.Menu
                 case Resource.Id.opera:
                 case Resource.Id.safari:
                 case Resource.Id.ie:
-                    toast(item.Title.ToString());
+                    toast(item.TitleFormatted.ToString());
                     return true;
                 default:
                     return base.OnContextItemSelected(item);
