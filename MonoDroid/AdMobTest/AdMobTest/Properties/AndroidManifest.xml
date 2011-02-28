@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" package="samples.admobtest">
+  <application>
+    <meta-data android:value="a14d6a968c18a40" android:name="ADMOB_PUBLISHER_ID" />
+    <activity android:name="com.admob.android.ads.AdMobActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:configChanges="orientation|keyboard|keyboardHidden" />
+    <receiver android:name="com.admob.android.ads.analytics.InstallReceiver" android:exported="true">
+      <intent-filter>
+        <action android:name="com.android.vending.INSTALL_REFERRER" />
+      </intent-filter>
+    </receiver>
+  </application>
+  <uses-sdk android:minSdkVersion="4" />
+  <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
