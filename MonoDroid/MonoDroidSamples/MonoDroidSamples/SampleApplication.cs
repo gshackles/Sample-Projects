@@ -1,5 +1,6 @@
 using System;
 using Android.App;
+using Android.Runtime;
 using MonoDroidSamples.DemoActivities.Database;
 
 namespace MonoDroidSamples
@@ -9,8 +10,8 @@ namespace MonoDroidSamples
     {
         public NoteDatabaseAdapter NoteDatabaseAdapter { get; private set; }
 
-        public SampleApplication(IntPtr handle)
-            : base(handle)
+        public SampleApplication(IntPtr handle, JniHandleOwnership transfer)
+            : base(handle, transfer)
         {
         }
 

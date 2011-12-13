@@ -1,5 +1,6 @@
 using System;
 using Android.App;
+using Android.Runtime;
 using Funq;
 using IoCDemo.Quotes;
 using TinyIoC;
@@ -11,8 +12,8 @@ namespace IoCDemo
     {
         public Container FunqContainer { get; private set; }
 
-        public DemoApplication(IntPtr handle)
-            : base(handle)
+        public DemoApplication(IntPtr handle, JniHandleOwnership transfer)
+            : base(handle, transfer)
         {
         }
 

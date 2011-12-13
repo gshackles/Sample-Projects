@@ -1,5 +1,6 @@
 ﻿using System;
 using Android.App;
+using Android.Runtime;
 using DatabaseDemo.DataAccess;
 
 namespace DatabaseDemo
@@ -9,8 +10,8 @@ namespace DatabaseDemo
     {
         public INoteRepository NoteRepository { get; set; }
 
-        public DatabaseDemoApplication(IntPtr handle)
-            : base(handle)
+        public DatabaseDemoApplication(IntPtr handle, JniHandleOwnership transfer)
+            : base(handle, transfer)
         {
         }
 
