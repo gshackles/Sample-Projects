@@ -32,7 +32,7 @@ namespace BrowserDemo
             _historyDataHelper = new HistoryDataHelper(this);
 
             _urlText = FindViewById<EditText>(Resource.Id.url);
-            _urlText.KeyPress = _urlText_KeyPress;
+            _urlText.KeyPress += _urlText_KeyPress;
 
             FindViewById<Button>(Resource.Id.go_button).Click += delegate { updateBrowser(); };
 
@@ -40,26 +40,19 @@ namespace BrowserDemo
             _browser.Settings.JavaScriptEnabled = true;
             _browser.SetWebViewClient(new CustomWebViewClient(_urlText));
             _browser.SetWebChromeClient(new CustomWebChromeClient(this, _historyDataHelper));
-            _browser.Touch = delegate 
-            { 
-                _browser.RequestFocus(FocusSearchDirection.Down); 
-
-                return false; 
-            };
+            _browser.Touch += (sender, args) => _browser.RequestFocus(FocusSearchDirection.Down);
 
             goToHomePageIfSet();
         }
 
-        private bool _urlText_KeyPress(View v, int keyCode, KeyEvent e)
+        void _urlText_KeyPress(object sender, View.KeyEventArgs e)
         {
             if (e.KeyCode == Keycode.Enter)
             {
                 updateBrowser();
 
-                return true;
+                e.Handled = true;
             }
-
-            return false;
         }
 
         private void updateBrowser()
